@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* only for debugging */
+  /* border: 1px solid black; */
+}
+
+body {
+  height: 100vh;
+  background: #dadada;
+  overflow: hidden;
+  /* Cho gallery ra giữa màn hình */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image_wrapper {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image {
+  width: 22%;
+  border-radius: 5px;
+  /* Vì border-radius tag này, nên image vì overflow */
+  overflow: hidden;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.image img {
+  width: 100%;
+  height: 100%; /* fix here*/
+  object-fit: cover;
+  object-position: center;
+  transition: 0.25s;
+}
+
+.image:hover img {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.gallery {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.6);
+  /* Căn giữa các thành phần con */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.8);
+  /* Animation */
+  opacity: 0;
+  /* Vì ta dùng opacity để ẩn gallery, nó vẫn còn đó, nên ta cần vô hiệu hoá nó */
+  pointer-events: 0;
+  transform: scale(0.8);
+  transition: 0.5s;
+}
+
+.close {
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.gallery_inner {
+  width: 70%;
+  height: 90%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery_inner img {
+  width: 100%;
+}
+
+.control {
+  font-size: 50px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.control.prev {
+  left: 35px;
+}
+
+.control.next {
+  right: 35px;
+}
+
+.show_gallery {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+  z-index: 1;
+}

@@ -1,94 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap");
-
-:root{
-    --primary-color: #f2726a;
+.card-wrapper {
+  text-decoration: none;
+  color: black;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.card {
+  cursor: pointer;
+  height: 100%;
 }
 
-body{
-    color:white;
-    height: 100vh;
-  background: linear-gradient(to right, #4daf54, #3d8880);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Poppins";
-}
-
-.card{
-    width: 300px;
-    height: 400px;
-    background: #242628;
-    border-radius: 10px;
-   text-align: center;
-   overflow: hidden;
-   margin: 20px;
-}
-
-.card_img{
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid var(--primary-color);
-    overflow: hidden;
-    margin: 0 auto;
-    transform: translateY(25px);
-    transition: 0.5s;
-}
-
-.card_img img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    object-position: center;
-}
-
-.card h2{
-    margin-top: 35px;
-}
-
-.card p{
-    color:var(--primary-color)
-}
-
-.card_social{
-    margin: 25px 0;
-}
-
-.card_social a{
-    color: white;
-    margin: 25px 20px;
-    font-size: 20px;
-    transition:0.5s;
-}
-
-.card button{
-    color: white;
-    background: transparent ;
-    padding: 10px 20px;
-    border: 1px solid var(--primary-color);
-    border-radius: 10px;
-    transition: 0.5s;
-}
-
-.card button:hover
-{
-    background: var(--primary-color);
-    cursor: pointer;
-}
-.card_social a:hover{
-    color: var(--primary-color);
-}
-
-.card_img:hover{
-    width: 100%;
-    height: 100%;
-    border-radius: unset;
-    transform: unset;
-    border: none;
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
