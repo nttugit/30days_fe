@@ -7,6 +7,23 @@ const gallery = document.querySelector(".gallery");
 
 let currentIndex = 0;
 
+function showPrevImage() {
+    if (currentIndex > 0) {
+        currentIndex -= 1;
+    } else {
+        currentIndex = images.length - 1;
+    }
+    galleryImg.src = images[currentIndex].src;
+}
+
+function showNextImage() {
+    if (currentIndex < images.length - 1) {
+        currentIndex += 1;
+    } else {
+        currentIndex = 0;
+    }
+    galleryImg.src = images[currentIndex].src;
+}
 
 images.forEach((item, index) => {
     item.addEventListener("click", () => {
@@ -27,20 +44,21 @@ document.addEventListener("keydown", (e) => {
 })
 
 prevImage.addEventListener("click", () => {
-    if (currentIndex > 0) {
-        currentIndex -= 1;
-    } else {
-        currentIndex = images.length - 1;
+    showPrevImage();
+})
+
+document.addEventListener("keydown", (e) => {
+    if (e.keyCode === 37 && gallery.classList.contains("show_gallery")) {
+        showPrevImage();
     }
-    galleryImg.src = images[currentIndex].src;
 })
 
 nextImage.addEventListener("click", () => {
-    if (currentIndex < images.length - 1) {
-        currentIndex += 1;
-    } else {
-        currentIndex = 0;
-    }
-    galleryImg.src = images[currentIndex].src;
+    showNextImage();
 })
 
+document.addEventListener("keydown", (e) => {
+    if (e.keyCode === 39 && gallery.classList.contains("show_gallery")) {
+        showNextImage();
+    }
+})
