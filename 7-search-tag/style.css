@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+:root {
+  --primary-color: #20b7ce;
+  /* 2ecde6 */
+}
+
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  /* background: var(--primary-color); */
+  background: #2ecde6;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_box {
+  background: #fff;
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px 20px;
+}
+
+.search_box-content {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.search_box-content li {
+  list-style: none;
+  color: #fff;
+  background: var(--primary-color);
+  /* background: #2ecde6; */
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.search_box-content input {
+  margin-left: 5px;
+  font-size: 20px;
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+.search_box-content li i {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.search_box-content li i:hover {
+  color: #e6e6e6;
+}
+
+.search_box-remove_btn {
+  color: #fff;
+  font-size: 17px;
+  background: var(--primary-color);
+  /* background: #2ecde6; */
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.search_box-remove_btn:hover {
+  background: #119aaf;
+}
