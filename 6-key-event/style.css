@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+:root {
+  --primary-color: #17a2b8;
+}
+
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Poppins";
+  background: var(--primary-color);
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.alert {
+  background: #fff;
+  font: 600 30px Poppins;
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+
+.box {
+  width: 80%;
+}
+
+.result {
+  font-size: 70px;
+  font-weight: 600;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 7px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  background: #fff;
+  width: 22%;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  /* padding: 0 10px; */
+}
+
+.card p {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.card_title {
+  background: #78c0c9;
+}
+
+.card_content {
+  color: black;
+}
+
+.hide {
+  display: none;
+}
