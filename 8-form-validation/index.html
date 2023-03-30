@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/form-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Form validation</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="login_form">
+            <h1>Login Form</h1>
+            <div class="form-control">
+                <input id="login-username" type="text" placeholder="Username">
+                <span></span>
+                <small></small>
+            </div>
+            <div class="form-control">
+                <input id="login-email" type="email" placeholder="Email">
+                <span></span>
+                <small></small>
+            </div>
+            <div class="form-control">
+                <input id="login-password" type="password" placeholder="Password">
+                <span></span>
+                <small></small>
+            </div>
+            <div class="form-control">
+                <input id="login-confirm_password" type="password" placeholder="Confirm password">
+                <span></span>
+                <small></small>
+            </div>
+            <button type="submit" class="btn-login">Log in</button>
+            <div class="form-footer">
+                Not a member?
+                <a href="#">Signup</a>
+            </div>
+        </form>
+    </div>
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

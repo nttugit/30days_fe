@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+:root {
+  --success-color: #2691d9;
+  --error-color: #e74c3c;
+  --input-height: 40px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background: linear-gradient(120deg, #3ca7ee, #9b408f);
+  height: 100vh;
+  font-family: "Poppins";
+  /* overflow: hidden; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 400px;
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  /* padding: 20px; */
+  padding: 40px;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.form-control {
+  width: 100%;
+  position: relative;
+  margin-top: 30px;
+}
+
+.form-control input {
+  width: 100%;
+  height: var(--input-height);
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #adadad;
+}
+
+.form-control span {
+  border-bottom: 2px solid var(--success-color);
+  position: absolute;
+  top: calc(var(--input-height) - 1px);
+  left: 0;
+  width: 0%;
+  transition: 0.3s;
+}
+
+.form-control input:focus ~ span {
+  width: 100%;
+}
+
+.form-control.login_error small {
+  color: var(--error-color);
+}
+
+.form-control.login_error input {
+  border-bottom: 2px solid var(--error-color);
+}
+
+.btn-login {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  height: 50px;
+  background: var(--success-color);
+
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 30px 0;
+  transition: all 0.4s ease;
+}
+
+.btn-login:hover {
+  background: #08609a;
+}
+
+.form-footer {
+  text-align: center;
+  color: #777676;
+  font-size: 18px;
+}
+
+.form-footer a {
+  text-decoration: none;
+  color: var(--success-color);
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
