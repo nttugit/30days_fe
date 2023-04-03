@@ -101,7 +101,7 @@ loginForm.addEventListener('submit', function (e) {
         && isValidPassword(password, confirmPassword)
     ) {
         Swal.fire(
-            'Login successfully!',
+            'Sign up successfully!',
             'Enjoy your journey!',
             'success'
         )
