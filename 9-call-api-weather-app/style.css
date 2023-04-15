@@ -11,8 +11,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
-    url(images/cold.png) no-repeat center/cover;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+    url(images/hot.png) no-repeat center/cover;
   font-family: sans-serif;
 }
 
@@ -21,7 +21,7 @@ body {
   background: #fff;
   border-radius: 10px;
   padding: 30px 20px;
-  background: url(images/cold.png) no-repeat center;
+  background: url(images/hot.png) center/cover;
 }
 
 .weather-search {
@@ -47,10 +47,12 @@ body {
   text-align: center;
   color: #fff;
   margin: 40px 0;
+  transition: 0.4s;
 }
 
 .weather-location {
   font-size: 35px;
+  font-weight: bold;
 }
 
 .weather-location {
@@ -64,16 +66,56 @@ body {
 
 .temperature {
   font-size: 65px;
+  font-weight: bold;
   background: rgba(255, 255, 255, 0.4);
   border-radius: 10px;
   margin: 0 30px;
   padding: 20px;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.5);
   border: none;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
 }
 
 .short-desc {
   font-size: 40px;
+  font-weight: bold;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  margin: 30px 0;
+}
+
+.other-detail {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.other-detail div {
+  display: flex;
+  flex-direction: column;
+}
+
+.other-detail div i {
+  margin-bottom: 12px;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.hot_weather_body {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+    url(images/hot.png) no-repeat center/cover;
+}
+
+.cold_weather_body {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+    url(images/cold.png) no-repeat center/cover;
+}
+
+.hot_weather_wrapper {
+  background: url(images/hot.png) center/cover;
+}
+.cold_weather_wrapper {
+  background: url(images/cold.png) center/cover;
 }
